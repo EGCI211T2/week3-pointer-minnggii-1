@@ -5,16 +5,15 @@ using namespace std;
 
 int main(int argc,char *argv[]){
   int *pa, *pb, i, temp;
-  int n;
-  n = argc - 1;
-  /*cout<<"How many numbers do you need?";
-  cin>>n;*/
+  int n = argc - 1;
+  //cout<<"How many numbers do you need?";
+  //cin>>n;
   pa = new int[n];
 
   for(i = 0; i < n; i++)
   {
     //cin>>*pa;
-    pa -= atoi(argv[i]);
+    *pa = atoi(argv[i+1]);
     pa++;
     
   }
@@ -46,7 +45,7 @@ for (i=0; i<n-1; i++ ,pa++){
 cout<<setw(3)<<*pa<<endl;
 
 pa -= (n-1);
-delete []pa;
+//delete []pa;
 
 return 0;
 }
